@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101322">
+<title>AI Story Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="brand">✦ AI Story Studio</div><span class="tag">Personal Studio</span></header>
+<main>
+<section class="hero">
+  <p class="eyebrow">YOUR STORY • YOUR VIDEO</p>
+  <h1>গল্প থেকে ভিডিওর পরিকল্পনা</h1>
+  <p class="sub">গল্প লিখুন, দৃশ্য সাজান, কণ্ঠে শুনুন এবং ভিডিও তৈরির জন্য প্রস্তুত করুন।</p>
+</section>
+<section class="panel">
+  <label for="story">আপনার গল্প বা ঘটনার বর্ণনা</label>
+  <textarea id="story" placeholder="এখানে বাংলায়, হিন্দিতে বা ইংরেজিতে গল্প লিখুন..."></textarea>
+  <div class="grid">
+    <div><label for="duration">ভিডিওর দৈর্ঘ্য</label><select id="duration"><option value="5">৫ মিনিট</option><option value="10">১০ মিনিট</option></select></div>
+    <div><label for="style">ভিডিওর ধরন</label><select id="style"><option>সিনেমাটিক</option><option>কার্টুন</option><option>অ্যানিমে</option><option>বাস্তবধর্মী</option><option>ফ্যান্টাসি</option></select></div>
+    <div><label for="voice">কণ্ঠ</label><select id="voice"><option value="female">মহিলা</option><option value="male">পুরুষ</option></select></div>
+    <div><label for="lang">ভাষা</label><select id="lang"><option value="bn">বাংলা</option><option value="hi">হিন্দি</option><option value="en">ইংরেজি</option></select></div>
+  </div>
+  <div class="actions"><button id="make">দৃশ্যের পরিকল্পনা তৈরি</button><button class="secondary" id="clear">মুছে ফেলুন</button></div>
+  <p class="note">এই প্রথম সংস্করণে গল্পকে দৃশ্যভাগে সাজানো ও ব্রাউজারের কণ্ঠে শোনার সুবিধা আছে। AI ভিডিও ক্লিপ তৈরির সংযোগ পরের ধাপে যোগ হবে।</p>
+</section>
+<section class="panel results" id="results" hidden>
+  <div class="resulthead"><h2>আপনার দৃশ্যসমূহ</h2><button class="secondary" id="download">দৃশ্যের স্ক্রিপ্ট ডাউনলোড</button></div>
+<button onclick="speakAll()">সব দৃশ্য একসঙ্গে শুনুন</button>
+  <div id="scenes"></div>
+  <div id="video-images"></div>
+  <div class="video-export">
+  <h2>সম্পূর্ণ ভিডিও তৈরি করুন</h2>
+  <label for="music">ব্যাকগ্রাউন্ড মিউজিক</label>
+  <select id="music">
+    <option value="none">মিউজিক ছাড়া</option>
+    <option value="soft">শান্ত মিউজিক</option>
+  </select>
+  <button id="create-video">ভিডিও তৈরি ও MP4 ডাউনলোড</button>
+  <p id="video-status">প্রথমে দৃশ্য তৈরি করুন।</p>
+  </div>
+  <p class="note">
+  ছবির বর্ণনা কপি করে
+  <a href="https://www.craiyon.com/" target="_blank" rel="noopener">
+    Craiyon
+  </a>-এ পেস্ট করে ছবি তৈরি করতে পারবে।
+  </p>
+</section>
+</main>
+<footer>AI Story Studio · ব্যক্তিগত ব্যবহারের জন্য</footer>
+<script src="app.js"></script>
+</body></html>
